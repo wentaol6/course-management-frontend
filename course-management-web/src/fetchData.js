@@ -23,16 +23,6 @@ const fetchData = ({ url, parameters, body, method }) => {
 
 
     return fetch(fullUrl, config)
-        // .then(response => {
-        //     return response.json().then(data => {
-        //         if (!response.ok) {
-        //             const error = new Error(data.error || `HTTP error! Status: ${response.status}`);
-        //             error.status = response.status;
-        //             throw error;
-        //         }
-        //         return data; 
-        //     });
-        // })
         .then(response => {
             if (!response.ok) {
                 return response.text().then(text => {
