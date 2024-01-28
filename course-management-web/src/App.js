@@ -9,6 +9,7 @@ import All from './query/All';
 import Users from './manage/Users';
 import Courses from './manage/Courses';
 import Enrolments from './manage/Enrolments';
+import NotFound from './NotFound';
 
 function App() {
   return (
@@ -42,6 +43,9 @@ function App() {
           </Route>
           <Route path='/manage/enrolments'>
             <Enrolments />
+          </Route>
+          <Route path='*'>
+            <NotFound />
           </Route>
         </Switch>
       </div>
